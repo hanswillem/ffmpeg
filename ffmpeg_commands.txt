@@ -1,0 +1,14 @@
+//get video info
+ffmpeg -hide_banner -i input.mov
+
+//make quicktime compatible mp4
+ffmpeg -i input.mov -vcodec h264 -pix_fmt yuv420p -vf scale=1280x720 output.mp4
+
+//turn video into image sequence
+ffmpeg -i inmput.mov frame%d.png
+
+//turn video into a gif
+ffmpeg -i input.mov output.gif
+
+//turn video into prores hq video
+ffmpeg -i input.mov -c:v prores -profile:v 3 output.mov
