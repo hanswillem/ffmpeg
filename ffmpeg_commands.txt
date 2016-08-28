@@ -15,3 +15,6 @@ ffmpeg -i inmput.mov frame%d.png
 
 //turn video into a gif
 ffmpeg -i input.mov output.gif
+
+//strip audio from video
+ffmpeg -i input.mov -vcodec copy -an output.mov
