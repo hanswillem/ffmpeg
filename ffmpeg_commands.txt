@@ -22,6 +22,6 @@ ffmpeg -i input.mov output.gif
 //strip audio from video
 ffmpeg -i input.mov -vcodec copy -an output.mov
 
-//replace audio
-ffmpeg -i audio.wav -i input.mov -c copy output.mov
+//replace audio in video
+ffmpeg -i audio.wav -i input.mov -c copy -shortest output.mov
 
