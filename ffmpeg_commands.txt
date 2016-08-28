@@ -5,7 +5,10 @@ ffmpeg -hide_banner -i input.mov
 ffmpeg -i input.mov -c:v prores -profile:v 3 output.mov
 
 //make quicktime compatible mp4
-ffmpeg -i input.mov -vcodec h264 -pix_fmt yuv420p -vf scale=1280x720 output.mp4
+ffmpeg -i input.mov -vcodec h264 -pix_fmt yuv420p output.mp4
+
+//scale video
+ffmpeg -i input.mov -vf scale=1280x720 output.mov
 
 //extract audio from video
 ffmpeg -i input2.mov -vn audio.wav
@@ -18,3 +21,4 @@ ffmpeg -i input.mov output.gif
 
 //strip audio from video
 ffmpeg -i input.mov -vcodec copy -an output.mov
+
