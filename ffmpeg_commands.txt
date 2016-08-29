@@ -34,5 +34,7 @@ ffmpeg -i 02 input.mov -f ffmetadata metadata.txt
 //strip metadata from file
 ffmpeg -i input.mov -map_metadata -1 -c:v copy -c:a copy output.mov
 
+//get screenshot from video
+ffmpeg -ss 00:00:05 -i input.mov -vframes 1 output.png
 
 
