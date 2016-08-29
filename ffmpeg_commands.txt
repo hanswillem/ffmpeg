@@ -31,5 +31,8 @@ ffmpeg -i audio.wav -i input.mov -c copy -shortest output.mov
 //save metadata in a txt file
 ffmpeg -i 02 input.mov -f ffmetadata metadata.txt
 
+//strip metadata from file
+ffmpeg -i input.mov -map_metadata -1 -c:v copy -c:a copy output.mov
+
 
 
