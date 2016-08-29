@@ -13,8 +13,11 @@ ffmpeg -i input.mov -vf scale=1280x720 output.mov
 //extract audio from video
 ffmpeg -i input2.mov -vn audio.wav
 
-//turn video into image sequence
-ffmpeg -i inmput.mov frame%d.png
+//turn video into image sequence (%4d means 4 digits / %d means 1 digit) 
+ffmpeg -i inmput.mov frame%4d.png
+
+//turn video into image sequence (%4d means 4 digits / %d means 1 digit) 
+ffmpeg -i frame%4d.png output.mov
 
 //turn video into a gif
 ffmpeg -i input.mov output.gif
