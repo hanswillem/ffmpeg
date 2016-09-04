@@ -40,4 +40,6 @@ ffmpeg -i input.mov -map_metadata -1 -c:v copy -c:a copy output.mov
 //get screenshot from video
 ffmpeg -ss 00:00:05 -i input.mov -vframes 1 output.png
 
+//make video twice as fast
+ffmpeg -i input.mov -filter:v "setpts=0.5*PTS" output.mov
 
