@@ -16,8 +16,8 @@ ffmpeg -i input2.mov -vn audio.wav
 //turn video into image sequence (%4d means 4 digits / %d means starting with 1 digit)
 ffmpeg -i inmput.mov frame%4d.png
 
-//turn image sequence into video starting at image number 12
-ffmpeg -start_number 12 -i frame%4d.png output.mov
+//turn image sequence into video starting at image number 12 (-r 60 = input framerate / -r 30 = output framrate)
+ffmpeg -start_number 12 -r 60 -i smoke_frame_%4d.png -r 30 output.gif
 
 //turn video into image sequence (%4d means 4 digits / %d means starting with 1 digit) 
 ffmpeg -i frame%4d.png output.mov
