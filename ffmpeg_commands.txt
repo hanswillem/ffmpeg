@@ -19,8 +19,8 @@ ffmpeg -i inmput.mov frame%4d.png
 //turn video into image sequence (%4d means 4 digits / %d means starting with 1 digit) 
 ffmpeg -i frame%4d.png output.mov
 
-//turn video into a gif
-ffmpeg -i input.mov output.gif
+//turn video into a gif (-r 25 = 25fps)
+ffmpeg -i input.mov -r 25 output.gif
 
 //strip audio from video
 ffmpeg -i input.mov -vcodec copy -an output.mov
