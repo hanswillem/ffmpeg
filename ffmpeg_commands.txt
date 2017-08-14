@@ -14,7 +14,7 @@ ffmpeg -i input.mov -vcodec h264 -pix_fmt yuv420p output.mp4
 ffmpeg -i input.mov -vf scale=1280x720 output.mov
 
 //extract audio from video
-ffmpeg -i input2.mov -vn audio.wav
+ffmpeg -i input.mov -vn audio.wav
 
 //turn video into image sequence (%4d means 4 digits / %d means starting with 1 digit)
 ffmpeg -i inmput.mov frame%4d.png
