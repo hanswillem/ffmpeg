@@ -4,6 +4,9 @@ ffmpeg -hide_banner -i input.mov
 //turn video into prores hq video
 ffmpeg -i input.mov -c:v prores -profile:v 3 output.mov
 
+//turn video into prores hq video and strip it of the audio
+ffmpeg -i input.mov -c:v prores -profile:v 3 -an output.mov
+
 //make quicktime compatible mp4
 ffmpeg -i input.mov -vcodec h264 -pix_fmt yuv420p output.mp4
 
