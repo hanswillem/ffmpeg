@@ -1,3 +1,6 @@
+//update ffmpeg
+brew update && brew upgrade ffmpeg
+
 //get video info
 ffmpeg -hide_banner -i input.mov
 
