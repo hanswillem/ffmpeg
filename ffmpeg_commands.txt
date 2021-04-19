@@ -32,7 +32,7 @@ ffmpeg -i input.mov -r 25 output.gif
 ffmpeg -i input.mov -vcodec copy -an output.mov
 
 //replace audio in video
-ffmpeg -i audio.wav -i input.mov -c copy -shortest output.mov
+ffmpeg -i video.mov -i audio.wav -c:v copy -map 0:v:0 -map 1:a:0 output.mov
 
 //save metadata in a txt file
 ffmpeg -i 02 input.mov -f ffmetadata metadata.txt
