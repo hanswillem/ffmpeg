@@ -13,6 +13,9 @@ ffmpeg -i input.mov -c:v prores -profile:v 3 -an output.mov
 //make quicktime compatible mp4
 ffmpeg -i input.mov -vcodec h264 -pix_fmt yuv420p output.mp4
 
+//turn video into HAP Q
+ffmpeg -i input.mov -c:v hap -format hap_q output.mov
+
 //scale video
 ffmpeg -i input.mov -vf scale=1280x720 output.mov
 
