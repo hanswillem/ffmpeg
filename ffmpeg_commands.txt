@@ -25,6 +25,9 @@ ffmpeg -i input.mov -vf scale=1280x720 output.mov
 //extract audio from video
 ffmpeg -i input.mov -vn audio.wav
 
+//extract audio from video and convert it to pcm wav (signed bit 24 bit Little Endian)
+ffmpeg -i glasmuseum.mp4 -acodec pcm_s24le output.wav
+
 //turn image sequence into video starting at image number 12 (-r 60 = input framerate / -r 30 = output framrate)
 ffmpeg -start_number 12 -r 60 -i smoke_frame_%4d.png -r 30 output.gif
 
